@@ -1,3 +1,4 @@
+let section = document.querySelector('#results');
 let searchButton = document.querySelector('#searchButton');
 let queryInput = document.querySelector('#query');
 let url = 'https://recipe-puppy-proxy.herokuapp.com/api/recipes?q=';
@@ -19,13 +20,13 @@ searchButton.addEventListener('click', function() {
         // console.log('each character',data.characters[i])
         html += `<div>
         <h2>${result.title}<h2>
-        <h3>${result.thumbnail}</h3>
+        <img src="${result.thumbnail}" alt = "No Image!" />
         <p> ${result.href}</p>
         </div>`
     }
-  })
     section.innerHTML = html;
-  });
+  })
+});
       // console.log('each character',data.characters[i])
 
 
